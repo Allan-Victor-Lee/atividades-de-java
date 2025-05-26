@@ -1,0 +1,34 @@
+public class BasicOperations {
+
+  public static int basicMath(String op, int v1, int v2) {
+    if (op.equals("+")) {
+      return somar(v1, v2);
+    } else if (op.equals("-")) {
+      return subtrair(v1, v2);
+    } else if (op.equals("*")) {
+      return multiplicar(v1, v2);
+    } else if (op.equals("/")) {
+      return dividir(v1, v2);
+    } else {
+      throw new IllegalArgumentException("Operação inválida: " + op);
+    }
+  }
+
+  // Métodos auxiliares
+  private static int somar(int a, int b) {
+    return a + b;
+  }
+
+  private static int subtrair(int a, int b) {
+    return a - b;
+  }
+
+  private static int multiplicar(int a, int b) {
+    return a * b;
+  }
+
+  private static int dividir(int a, int b) {
+    if (b == 0) throw new ArithmeticException("Divisão por zero não é permitida.");
+    return a / b;
+  }
+}
