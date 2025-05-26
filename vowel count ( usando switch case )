@@ -1,0 +1,30 @@
+public class Vowels {
+
+  public static int getCount(String str) {
+    int count = 0;
+
+    str = str.toLowerCase();
+
+    for (char ch : str.toCharArray()) {
+      switch (ch) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+          count++;
+          break;
+        default:
+        
+          break;
+      }
+    }
+
+    System.out.println("Número de vogais: " + count);
+    return count;
+  }
+
+  public static void main(String[] args) {
+    getCount("Programacao");
+  }
+}
