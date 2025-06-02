@@ -1,0 +1,29 @@
+package robos;
+import robocode.*;
+
+public class OitoBot extends Robot
+{
+    public void run() {
+        while (true) {
+
+          ahead(100);
+          turnLeft(90);
+          ahead(100);
+	      turnLeft(90);
+          ahead(100);
+          turnLeft(90);
+          ahead(100);
+          turnLeft(90);
+		   
+
+          ahead(100);
+          turnRight(90);
+          ahead(100);
+          turnRight(90);
+          ahead(100);
+          turnRight(90);
+          ahead(100);
+		   turnRight(90);
+        }
+    }
+}
