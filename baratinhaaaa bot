@@ -1,0 +1,17 @@
+package robos;
+import robocode.*;
+
+public class baratabot extends Robot{
+	public void run() {
+	
+		while(true){
+			ahead(800);
+		}
+	}
+	public void onHitWall(HitWallEvent event){
+		setDebugProperty("angulo da colisao: ", String.valueOf(event.getBearing()));
+		
+		double anguloParede = event.getBearing();
+		turnLeft(90 - anguloParede);
+	}
+}
